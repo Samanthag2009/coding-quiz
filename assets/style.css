@@ -1,4 +1,19 @@
+/* Root/BG */
+:root {
+    background-color: rgb(169, 167, 167);
+}
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 /* make timer display*/
 .time{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }; 
+
+/* Style Start Button */
+.startbt{
+    size: 10px;
+}
