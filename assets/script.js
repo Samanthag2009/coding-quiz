@@ -4,7 +4,7 @@ var secondsLeft = 60;
 var mainEl = document.getElementById("main");
 //Timer counting down by default, counting down in intervals
 
-document.getElementById("startbt").addEventListener("click", countDown);
+document.getElementById("startbtn").addEventListener("click", countDown);
 function countDown() {
     var timerSeconds = setInterval (function() {
         secondsLeft--;
@@ -19,6 +19,8 @@ function countDown() {
 function displayTimer() {
 timeEl.textContent = " ";
 }
+
+
 
 //countDown();
 

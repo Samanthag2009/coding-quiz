@@ -19,15 +19,17 @@
 }
 
 h1 {
-    font-size: 5.4rem;
+    font-size: 9.4rem;
     color: #9E0013;
     margin-bottom: 5rem;
+    font-family: 'East Sea Dokdo', cursive;
 }
 
 h2 {
     font-size: 2rem;
     margin-bottom: 4rem;
     text-align: center;
+    font-family: 'Nunito', sans-serif;
 }
 
 .container {
@@ -64,8 +66,8 @@ h2 {
     display: none;
 }
 
-.btn {
-    font-size: 2rem;
+#startbtn {
+    font-size: 3rem;
     padding: 2rem 0;
     width: 30rem;
     text-align: center;
@@ -74,6 +76,21 @@ h2 {
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,9,1) 35%, rgba(255,0,0,1) 100%);
     border-radius: 4px;
+    font-family: 'East Sea Dokdo', cursive;
+
+}
+
+#hsbtn {
+    font-size: 3rem;
+    padding: 2rem 0;
+    width: 30rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color:#f8f8f8;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,9,1) 35%, rgba(255,0,0,1) 100%);
+    border-radius: 4px;
+    font-family: 'East Sea Dokdo', cursive;
 
 }
 
@@ -89,4 +106,31 @@ transform: scale(1.03);
     cursor: not-allowed;
     box-shadow: none;
     transform: none;
+}
+
+.abtn {
+    font-size: 2rem;
+    padding: 2rem 0;
+    width: 30rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color:#f8f8f8;
+    background: rgb(2,0,36);
+background: linear-gradient(294deg, rgba(2,0,36,1) 0%, rgba(121,9,9,1) 35%, rgba(255,0,0,1) 100%);
+    border-radius: 4px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.nbtn {
+    font-size: 2rem;
+    padding: 2rem 0;
+    width: 10rem;
+    height: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color:#f8f8f8;
+    background: rgb(2,0,36);
+background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(121,9,9,1) 35%, rgba(255,0,0,1) 100%);
+    border-radius: 4px;
+    font-family: 'Nunito', sans-serif;
 }

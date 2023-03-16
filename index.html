@@ -5,37 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Coding Quiz</title>
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!--CSS-->
     <link rel="stylesheet" href="./assets/style.css">
+    <!--Bootstrap-->
+    <link rel=”stylesheet” href=”https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css”rel=”nofollow” integrity=”sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm” crossorigin=”anonymous”>
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Moon+Dance&family=Nunito:ital,wght@1,200&display=swap" rel="stylesheet">
   </head>
   <body>
     <!---Timer-->
     <span style="color: #9E0013"><h4 class="time" style="text-align: right;"></h4></span>
 	<div id="main"></div>
 
-  <!--Home-->
+  <!--Home Page-->
   <div class="container">
 <div id="startpg" class="flex-column flex-center">
   <h1>Coding Quiz</h1>
   <h2>Test your knowledge! Try to answer all the questions correctly within the time limit, but be careful; a wrong answer will decrease your score/time by 10! Good luck!</h2>
-<a href="/game.html" class="btn" >Start!</a>
-<a href="/highscores.html" id="hsbtn" class="btn" >High Scores</a>
+<button id="startbtn" class="btn">Start!</button>
+<button id="hsbtn" class="btn" >High Scores</button>
+</div>
+<!--Quiz  Page-->
+<!--Question-->
+<div  id="main2">
+<div class="card-body">
+  <h5 class="card-text font-weight-bold" id="question"></h5>
 
-
+</div>
+<!--Answers-->
+<div class="col-md-12 p-4" id="options">
+  <button class="abtn btn-block btn-outline-success text-left option" id="options1"></button>
+  <button class="abtn btn-block btn-outline-success text-left option" id="options2"></button>
+  <button class="abtn btn-block btn-outline-success text-left option" id="options3"></button>
+<button class="abtn btn-block btn-outline-success text-left option" id="options4"></button>
+<div class="footer p-4">
+  <button class="nbtn btn-success justify-center" id="next">Next</button>
+</div>
+</div>
 
 </div>
 
-<button id="startbt">Start!</button>
+
+<!--Results-->
+<div id="result">
+<h3 class="mt-5 display-4">Your Score: <span id="score"></span></h3>
+
+</div>
+<!--Enter Name-->
+<div class="mb-3">
+  <label for="formGroupExampleInput" class="form-label">Your Name</label>
+  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your name!">
+</div>
   </div>
-    <!--Header-
-    <div id="start">
-     <span style="color: #9E0013"> <h1 id="banner" style="text-align: center;"><h1>
-    <h3 id="caption" style="text-align:center;"><h3></span>
-    <button id="startbt">Start!</button>
-    </div> --->
-      <!---<Test your knowledge! Try to answer all the questions correctly within the time limit, but be careful; a wrong answer will decrease your score/time by 10! Good luck!</h3></div>
-    -->
-    <script src="./assets/script.js"></script>
+
+   <script>
+
+
+//Variables
+
+var answer = [];
+var score = 0;
+
+//Main Function
+
+$(document).ready(function(){
+$("#result").hide();
+
+// Start Page disappear function??
+
+function allthebtns(){
+
+  if(secondsLeft > 0) {
+    $("#startpg").hide();
+    if(secondsLeft == 0){
+      $("#result").show();
+    }
+    else{
+      $("#next").show();
+    }
+  }
+}
+
+})
+
+
+
+   </script>
   
+    <script src="./assets/script.js"></script>
+    <script src="./assets/data.json"></script>
 
 </body>
 </html>
