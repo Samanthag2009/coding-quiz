@@ -4,6 +4,7 @@ const choices = Array.from(document.querySelectorAll(".choice-text"));
 const progressText = document.querySelector("#progressText");
 const scoreText = document.querySelector("#score");
 const progressBarFull = document.querySelector("#progressBarFull");
+const timerText = document.querySelector("#timer");
 
 //Declare question and score variables
 let currentQuestion = {};
@@ -62,15 +63,16 @@ let questions = [
 ];
 
 //fixed criteria
-const SCORE_POINTS = 100;
+const SCORE_POINTS = 10;
 const MAX_QUESTIONS = 5;
 
 //sett he start criteria for the beginning of the game. 
 startGame = () => {
+    countdown();
     questionsCounter = 0
     score = 0
     availableQuestions = [...questions]
-    getNewQuestion()
+    getNewQuestion();
 };
 
 //function to store score in local storage and count progression through questions
@@ -100,6 +102,7 @@ getNewQuestion = () => {
 };
 
 //this is where time decrement score would go!!
+//adding event listener for each choice and marking them red for incorrect and green for correct
 choices.forEach(choice => {
     choice.addEventListener("click", e => {
         if(!acceptingAnswers) return
@@ -114,7 +117,13 @@ choices.forEach(choice => {
             incrementScore(SCORE_POINTS)
         }
 
+        if (classToApply === "incorrect") {
+            decrementScore(SCORE_POINTS)
+            decrementTime(10)
+        }
+
         selectedChoice.parentElement.classList.add(classToApply);
+
 
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply);
@@ -129,4 +138,31 @@ incrementScore = num => {
     scoreText.innerText = score
 };
 
+decrementScore = num => {
+    score -=num
+    scoreText.innerText = score
+};
+
+decrementTime = num => {
+    time -=num
+    timerText.textContent = time
+    
+}
+
+//setting timer
+countdown = () => {
+    let timeLeft = 60;
+    let timeInterval = setInterval(() => {
+    
+        if (timeLeft > 1) {
+            timeLeft--
+            timerText.textContent = timeLeft;
+        } if (timeLeft === 1){
+            clearInterval(timeInterval);
+            return window.location.assign("/end.html")
+        } 
+    }, 1000);
+}
+
 startGame();
+
