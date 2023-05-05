@@ -1,40 +1,64 @@
 # Coding Quiz
 
-This quiz allows you to sharpen your skills and test your knowledge. Can you beat your own score?
+
 
 ## Description
 
-While still in development, this quiz functions on basic javascript features and html.
+The Coding Quiz is a game that allows you to test your JavaScript knowledge! Go against the clock and beat your own high score!
 
-## Challenges and Successes
 
-### Challenges
+### Executing program
 
-* The main holdup for this project was deciding to go a different route midway through development. In the beginning, this quiz was comprised of multiple functional HTML documents that referenced each other, triggered by button. Had I seen this through and commited to the initial design, I would have reached completion in a short amount of time. I switched gears to attempting to create the quiz on one page of HTML and ran behind significantly.
+To get started, click "Play"
 
-* The interval timer posed a challenge that I'm looking forward to solving on resubmition.
 
-### Successes
+![start](./assets/images/start.png)
 
-This project was very helpful in practicing my CSS skills, and allowed me to work with visual effects such as gradients for an aesthatic experienc for our end user.
+You have 60 seconds to complete the quiz. Click on the choice that you thikn is the right answer.
 
-## To Do
 
-* Make a firm decision on methods for completion and stick to it
-* fix interval timer
-* work with lcoal storage for the High Score page
-* Create questions with event listeners
+![quiz](./assets/images/quiz.png)
+
+
+The display above the questions will show your progress, time left, and points accrued.
+
+
+
+![display](./assets/images/display.png)
+
+
+At the end, you can save your name and either play again or go back to the homepage.
+
+
+![end](./assets/images/end.png)
+
+
+From the Homepage, clicking "High Scores" will allow you to see the leaderboard.
+
+
+
+![highscore](./assets/images/highscore.png)
 
 ## Authors
-
-Contributors names and contact info
 
 Samantha Gosselin
 samanthag2009@gmail.com
 
 ## Version History
 
+* 0.2
+    * Re-tooled app in its entirety, researching methods learned in class since December 2022 and studying methods used by other programmers
 * 0.1
     * Initial Release
 
+## License
+
+This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+
 ## Acknowledgments
+
+Inspiration, code snippets, etc.
+* [awesome-readme](https://github.com/matiassingers/awesome-readme)
+* [Brian Design YouTube Tutorial](https://www.youtube.com/watch?v=f4fB9Xg2JEY)
+* [Rem in CSS](https://www.sitepoint.com/understanding-and-using-rem-units-in-css/)
+* [Simple Steps Code](https://simplestepscode.com/javascript-quiz-tutorial/)

@@ -21,7 +21,7 @@ body {
 
 }
 
-.choice-prefix {
+.choice-title {
     padding: 2rem 2.5rem;
     color: navy;
 }
@@ -40,19 +40,19 @@ body {
     background-color: darkred;
 }
 
-/* Heads up Display*/
+/* Display values and fill bar on the quiz*/
 
-#hud {
+#display {
     display:flex;
     justify-content: space-between;
 }
 
-.hud-prefix {
+.display-title {
     text-align: center;
     font-size: 2rem;
 }
 
-.hud-main-text {
+.display-main-text {
     text-align: center;
 }
 
@@ -65,7 +65,7 @@ body {
     overflow: hidden;
 }
 
-#progressBarFull{
+#progressFill{
     height: 100%;
     background: green;
     width: 0%;
