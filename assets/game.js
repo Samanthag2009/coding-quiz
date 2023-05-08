@@ -80,7 +80,7 @@ getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionsCounter > MAX_QUESTIONS) {
         localStorage.setItem('lastScore', score)
 
-        return window.location.assign("/end.html")
+        return window.location.assign("./end.html")
     }
 
     questionsCounter++
@@ -160,7 +160,7 @@ countdown = () => {
             timerText.textContent = timeLeft;
         } if (timeLeft === 1){
             clearInterval(timeInterval);
-            return window.location.assign("/end.html")
+            return window.location.assign("./end.html")
         } 
     }, 1000);
 }
